@@ -81,9 +81,17 @@ brew update && brew upgrade
 # Install Docker Desktop if not installed
 if ! command -v docker &>/dev/null; then
     print_message "Docker Desktop not found. Installing Docker Desktop..."
-    brew install --cask docker
+    brew install --cask docker-desktop
 else
     print_message "Docker Desktop is already installed."
+fi
+
+# Install Ollama if not installed
+if ! command -v ollama &>/dev/null; then
+    print_message "Ollama not found. Installing Ollama..."
+    brew install --cask ollama
+else
+    print_message "Ollama is already installed."
 fi
 
 # Check if Docker Desktop is running
