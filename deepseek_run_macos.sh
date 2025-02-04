@@ -81,7 +81,7 @@ brew update && brew upgrade
 # Install Docker Desktop if not installed
 if ! command -v docker &>/dev/null; then
     print_message "Docker Desktop not found. Installing Docker Desktop..."
-    brew install --cask docker-desktop
+    brew install --cask docker
 else
     print_message "Docker Desktop is already installed."
 fi
